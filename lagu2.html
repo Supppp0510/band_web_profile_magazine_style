@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Girls - The 1975 // PERSONNEL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+
+    ::-webkit-scrollbar { width: 2px; }
+    ::-webkit-scrollbar-track { background: #000; }
+    ::-webkit-scrollbar-thumb { background: #333; }
+
+    body {
+      background-color: #000;
+      font-family: 'Inter', sans-serif;
+      color: #fff;
+      height: 100vh;
+      overflow: hidden; /* Lock scroll body agar rapi */
+    }
+
+    .main-container {
+      height: 80vh;
+      border: 1px solid #18181b; /* Zinc-900 */
+    }
+
+    .lyric-area {
+      scrollbar-width: none; /* Firefox */
+    }
+    .lyric-area::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+    .lyric-line {
+      transition: opacity 0.3s ease;
+      opacity: 0.3;
+    }
+    .lyric-line:hover {
+      opacity: 1;
+    }
+    .active-lyric {
+      opacity: 1;
+      color: #fff;
+    }
+  </style>
+</head>
+<body class="flex flex-col">
+
+  <nav class="p-6 flex justify-between items-center border-b border-zinc-900">
+    <h1 class="text-xs font-black tracking-[0.5em] uppercase">The 1975 // SYNK</h1>
+    <a href="index.html" class="text-[10px] uppercase tracking-widest text-zinc-500 hover:text-white transition">← Back to Discography</a>
+  </nav>
+
+  <main class="flex-grow flex items-center justify-center px-10">
+    <div class="main-container w-full max-w-6xl grid md:grid-cols-2">
+      
+      <div class="border-r border-zinc-900 p-10 flex flex-col justify-between bg-zinc-950/50">
+        <div>
+          <p class="text-[9px] font-bold text-zinc-600 tracking-[0.4em] uppercase mb-4">Now Playing // ST011</p>
+          <h1 class="text-6xl font-black italic tracking-tighter uppercase mb-2">Girls</h1>
+          <p class="text-xs text-zinc-500 tracking-wide uppercase font-medium">The 1975 — Deluxe Edition (2013)</p>
+        </div>
+
+        <div class="aspect-video bg-black border border-zinc-800 overflow-hidden shadow-2xl">
+          <video controls class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+            <source src="assets/img/vid/The 1975 vevo GIRLS Live in 1080p HD - Full Song - o2 london uk.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="flex justify-between items-end">
+          <div class="space-y-1">
+            <p class="text-[8px] text-zinc-700 uppercase tracking-widest font-bold">Credits</p>
+            <p class="text-[10px] text-zinc-500 italic">M. Healy, G. Daniel, A. Hann, R. MacDonald</p>
+          </div>
+          <p class="text-[10px] text-zinc-700 font-mono">4:14 / 0.0</p>
+        </div>
+      </div>
+
+<div class="lyric-area overflow-y-auto space-y-0 h-full relative">
+  
+  <h2 class="text-[9px] font-bold text-zinc-600 tracking-[0.4em] uppercase sticky top-0 bg-black z-50 py-10 px-10 border-b border-zinc-900/50">
+    Lyrics Transcription
+  </h2>
+
+  <div class="p-10 space-y-12 text-2xl font-bold leading-tight italic tracking-tight">
+          <p class="lyric-line">
+            Bite your face to spite your nose<br>
+            17 and a half years old<br>
+            Worrying about my brother finding out<br>
+            Where's the fun in doing what you're told?
+          </p>
+
+          <p class="lyric-line active-lyric">
+            'Cause they're just girls breaking hearts<br>
+            And eyes bright, uptight, just girls<br>
+            But she can't be what you need if she's 17<br>
+            They're just girls
+          </p>
+
+          <p class="lyric-line">
+            A pair of frozen hands to hold<br>
+            Oh, she's so southern, so she feels the cold<br>
+            One moment I was tearing off your blouse<br>
+            Now you're living in my house
+          </p>
+
+          <p class="lyric-line active-lyric">
+            'Cause they're just girls breaking hearts<br>
+            And eyes bright, uptight, just girls<br>
+            But she can't be what you need if she's 17<br>
+            They're just girls
+          </p>
+
+          <p class="lyric-line">
+            I said, "Yo, I think you better go, I can't take you"<br>
+            "I know you're looking for salvation in the secular age<br>
+            But, girl, I'm not your saviour"
+          </p>
+
+          <p class="lyric-line active-lyric pb-20">
+            They're just girls<br>
+            Just girls, just girls<br>
+            They're just girls...
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="p-6 border-t border-zinc-900 flex justify-between items-center text-[9px] text-zinc-700 tracking-[0.3em] font-bold">
+    <p>© 2026 DIRTY HIT RECORDS</p>
+    <p>VERSION 4.0.0 // ST</p>
+  </footer>
+
+</body>
+</html>

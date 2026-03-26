@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - The 1975 // SYNK</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&display=swap');
+
+    /* Scrollbar tipis */
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: #000; }
+    ::-webkit-scrollbar-thumb { background: #fff; }
+
+    body {
+      background-color: #000;
+      font-family: 'Inter', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Efek Grain Vintage */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Noise_Texture.png');
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .glass-nav {
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .editorial-caps {
+      letter-spacing: -0.02em;
+      line-height: 0.9;
+    }
+
+    /* Border Kotak Ikonik */
+    .the-frame {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="flex justify-between items-center px-8 py-6 glass-nav sticky top-0 z-50">
+    <h1 class="text-2xl font-black tracking-tighter uppercase italic">The 1975</h1>
+
+    <div class="flex items-center gap-10 text-[11px] font-bold uppercase tracking-[0.3em]">
+      <a href="index.html" class="hover:opacity-50 transition">Home</a>
+      <a href="about.html" class="border-b border-white pb-1">About</a>
+      
+      <div class="relative group">
+        <button class="hover:opacity-50 transition flex items-center gap-2">
+          Discography <span>↓</span>
+        </button>
+        <div class="absolute right-0 top-full hidden group-hover:block pt-4">
+          <div class="w-56 bg-white text-black p-2 shadow-2xl">
+            <a href="lagu1.html" class="block px-4 py-3 hover:bg-black hover:text-white text-[10px] border-b border-zinc-100 italic font-bold">It's Not Living</a>
+            <a href="lagu2.html" class="block px-4 py-3 hover:bg-black hover:text-white text-[10px] border-b border-zinc-100 italic font-bold">Girls</a>
+            <a href="lagu3.html" class="block px-4 py-3 hover:bg-black hover:text-white text-[10px] italic font-bold">Happiness</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="relative w-full h-[70vh] overflow-hidden">
+    <img src="assets/img/the1975.jpg" alt="The 1975" class="w-full h-full object-cover grayscale brightness-75">
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+    <div class="absolute bottom-12 left-8 md:left-16">
+        <p class="text-[10px] uppercase tracking-[0.8em] mb-2 text-zinc-400 italic">Established 2002</p>
+        <h1 class="text-6xl md:text-8xl font-black uppercase italic editorial-caps">An Inquiry <br>Into Modernity.</h1>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-8 py-24 grid md:grid-cols-12 gap-12">
+    
+    <div class="md:col-span-4 border-l border-zinc-800 pl-6 h-fit hidden md:block">
+        <span class="text-[10px] uppercase tracking-[0.4em] text-zinc-500 block mb-4 italic font-bold">Personnel</span>
+        <ul class="text-xs space-y-2 uppercase tracking-widest text-zinc-300">
+            <li>Matty Healy</li>
+            <li>Adam Hann</li>
+            <li>Ross MacDonald</li>
+            <li>George Daniel</li>
+        </ul>
+        <div class="mt-12">
+            <p class="text-[10px] text-zinc-600 leading-relaxed uppercase tracking-widest italic font-bold">
+                "We’re not a pop band. We’re a band that happens to make pop music."
+            </p>
+        </div>
+    </div>
+
+    <div class="md:col-span-8 space-y-12">
+      <div class="the-frame">
+        <h2 class="text-2xl font-black uppercase italic mb-8 border-b border-zinc-800 pb-4 tracking-tighter">Manchester, United Kingdom</h2>
+        
+        <div class="space-y-8 text-zinc-400 text-lg md:text-xl leading-relaxed font-light italic">
+          <p>
+            The 1975 adalah band pop rock asal Inggris yang terbentuk di Manchester pada tahun 2002. Band ini terdiri dari empat anggota utama: <span class="text-white font-bold">Matty Healy</span>, <span class="text-white font-bold">Adam Hann</span>, <span class="text-white font-bold">Ross MacDonald</span>, dan <span class="text-white font-bold">George Daniel</span>.
+          </p>
+
+          <p>
+            Mereka dikenal dengan gaya musik yang unik, memadukan berbagai genre seperti indie rock, pop, elektronik, dan R&B. Musik mereka sering kali mengangkat tema-tema modern seperti hubungan, kehidupan digital, kesehatan mental, hingga kritik sosial terhadap budaya kontemporer.
+          </p>
+
+          <p>
+            Album debut mereka yang berjudul <span class="text-white italic font-black uppercase tracking-tighter text-sm">The 1975</span> (2013) langsung menduduki puncak tangga lagu Inggris. Sejak itu, mereka terus berevolusi melalui diskografi yang kompleks dan berani.
+          </p>
+
+          <p>
+            Selain musik, The 1975 memiliki identitas visual yang kuat—sering menggunakan estetika monokrom, neon, dan minimalis. Hal ini menjadikan mereka tidak hanya sekadar band, melainkan sebuah <span class="text-white">ikon budaya modern</span> bagi generasi digital.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex justify-between items-center pt-12 text-[10px] uppercase tracking-[0.5em] text-zinc-700 font-bold italic border-t border-zinc-900">
+        <p>A Brief Inquiry</p>
+        <p>© 2026 Dirty Hit</p>
+      </div>
+    </div>
+
+  </section>
+
+</body>
+</html>

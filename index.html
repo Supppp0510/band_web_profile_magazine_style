@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 1975 - Official SYNK</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&display=swap');
+
+    /* Scrollbar minimalis */
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: #000; }
+    ::-webkit-scrollbar-thumb { background: #fff; }
+
+    body {
+      background-color: #000;
+      font-family: 'Inter', sans-serif;
+      color: #fff;
+    }
+
+    /* Efek Grain Vintage ala Film */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Noise_Texture.png');
+      opacity: 0.04;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* Garis kotak khas The 1975 */
+    .the-box {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.4s ease;
+    }
+    .the-box:hover {
+      border-color: rgba(255, 255, 255, 1);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .glass-nav {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-text {
+      letter-spacing: -0.05em;
+      line-height: 0.8;
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden">
+
+  <nav class="flex justify-between items-center px-8 py-6 glass-nav sticky top-0 z-50">
+    <h1 class="text-2xl font-black tracking-tighter uppercase italic">The 1975</h1>
+
+    <div class="flex items-center gap-10 text-[11px] font-bold uppercase tracking-[0.3em]">
+      <a href="index.html" class="hover:opacity-50 transition">Home</a>
+      <a href="about.html" class="hover:opacity-50 transition">About</a>
+      
+      <div class="relative group">
+        <button class="hover:opacity-50 transition flex items-center gap-2">
+          Discography <span>↓</span>
+        </button>
+        <div class="absolute right-0 top-full hidden group-hover:block pt-4">
+          <div class="w-56 bg-white text-black p-2 shadow-2xl">
+            <a href="lagu1.html" class="block px-4 py-3 hover:bg-black hover:text-white text-[10px] border-b border-zinc-100">It's Not Living</a>
+            <a href="lagu2.html" class="block px-4 py-3 hover:bg-black hover:text-white text-[10px] border-b border-zinc-100">Girls</a>
+            <a href="lagu3.html" class="block px-4 py-3 hover:bg-black hover:text-white text-[10px]">Happiness</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="relative h-[85vh] w-full overflow-hidden flex items-end p-8 md:p-16">
+    <img 
+      src="assets/img/the1975_billboard.jpg" 
+      class="absolute top-0 left-0 w-full h-full object-cover grayscale brightness-50"
+      alt="Hero"
+    >
+    <div class="relative z-10 w-full max-w-4xl">
+      <p class="text-[10px] uppercase tracking-[0.5em] mb-4 text-zinc-400">Being Funny In A Foreign Language</p>
+      <h2 class="text-7xl md:text-9xl font-black hero-text uppercase italic mb-6">At Their <br> Very Best.</h2>
+    </div>
+  </section>
+
+<section class="py-24 px-8 max-w-7xl mx-auto">
+  <div class="flex justify-between items-end mb-16 border-b border-zinc-800 pb-8">
+    <div>
+      <h2 class="text-4xl font-black uppercase italic">Members</h2>
+    </div>
+    <p class="text-[10px] text-zinc-500 hidden md:block italic">THE1975-ST-2026</p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+    <div class="the-box p-4 group cursor-pointer flex flex-col h-full">
+      <div class="overflow-hidden bg-zinc-900 aspect-[3/4] mb-6">
+        <img src="assets/img/matt.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
+      </div>
+      <div class="flex flex-col flex-grow gap-6">
+        <div class="border-l-2 border-zinc-800 pl-4">
+          <h3 class="font-black uppercase italic text-xl tracking-tighter leading-none">Matty Healy</h3>
+          <p class="text-zinc-500 text-[9px] uppercase tracking-[0.3em] mt-2 font-bold italic">Vocalist // Rhythm</p>
+        </div>
+        <a href="detail-member.html?member=matty" 
+           class="w-full py-3 border border-white/20 text-[10px] uppercase tracking-[0.4em] font-black italic text-center transition-all duration-300 group-hover:bg-white group-hover:text-black">
+           View Profile
+        </a>
+      </div>
+    </div>
+
+    <div class="the-box p-4 group cursor-pointer flex flex-col h-full">
+      <div class="overflow-hidden bg-zinc-900 aspect-[3/4] mb-6">
+        <img src="assets/img/adam.jpg" class="w-full h-full object-cover object-[center_5%] grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
+      </div>
+      <div class="flex flex-col flex-grow gap-6">
+        <div class="border-l-2 border-zinc-800 pl-4">
+          <h3 class="font-black uppercase italic text-xl tracking-tighter leading-none">Adam Hann</h3>
+          <p class="text-zinc-500 text-[9px] uppercase tracking-[0.3em] mt-2 font-bold italic">Lead Guitar // Personnel</p>
+        </div>
+        <a href="detail-member.html?member=adam" 
+           class="w-full py-3 border border-white/20 text-[10px] uppercase tracking-[0.4em] font-black italic text-center transition-all duration-300 group-hover:bg-white group-hover:text-black">
+           View Profile
+        </a>
+      </div>
+    </div>
+
+    <div class="the-box p-4 group cursor-pointer flex flex-col h-full">
+      <div class="overflow-hidden bg-zinc-900 aspect-[3/4] mb-6">
+        <img src="assets/img/Ross MacDonald.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
+      </div>
+      <div class="flex flex-col flex-grow gap-6">
+        <div class="border-l-2 border-zinc-800 pl-4">
+          <h3 class="font-black uppercase italic text-xl tracking-tighter leading-none">Ross MacDonald</h3>
+          <p class="text-zinc-500 text-[9px] uppercase tracking-[0.3em] mt-2 font-bold italic">Bassist // Personnel</p>
+        </div>
+        <a href="detail-member.html?member=ross" 
+           class="w-full py-3 border border-white/20 text-[10px] uppercase tracking-[0.4em] font-black italic text-center transition-all duration-300 group-hover:bg-white group-hover:text-black">
+           View Profile
+        </a>
+      </div>
+    </div>
+
+    <div class="the-box p-4 group cursor-pointer flex flex-col h-full">
+      <div class="overflow-hidden bg-zinc-900 aspect-[3/4] mb-6">
+        <img src="assets/img/george daniel.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700">
+      </div>
+      <div class="flex flex-col flex-grow gap-6">
+        <div class="border-l-2 border-zinc-800 pl-4">
+          <h3 class="font-black uppercase italic text-xl tracking-tighter leading-none">George Daniel</h3>
+          <p class="text-zinc-500 text-[9px] uppercase tracking-[0.3em] mt-2 font-bold italic">Drums // Producer</p>
+        </div>
+        <a href="detail-member.html?member=george" 
+           class="w-full py-3 border border-white/20 text-[10px] uppercase tracking-[0.4em] font-black italic text-center transition-all duration-300 group-hover:bg-white group-hover:text-black">
+           View Profile
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <footer class="p-16 border-t border-zinc-900 text-center">
+    <p class="text-zinc-700 text-[10px] tracking-[1em] uppercase">The 1975 // 2026</p>
+  </footer>
+
+</body>
+</html>

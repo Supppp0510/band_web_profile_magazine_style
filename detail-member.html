@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Member Detail - The 1975 // SYNK</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&display=swap');
+
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: #000; }
+    ::-webkit-scrollbar-thumb { background: #fff; }
+
+    body {
+      background-color: #000;
+      font-family: 'Inter', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Noise_Texture.png');
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .glass-nav {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .member-frame {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 10px;
+      background: #000;
+    }
+
+    .carousel-container {
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-title {
+      letter-spacing: -0.05em;
+      line-height: 0.8;
+    }
+  </style>
+</head>
+<body class="pb-20">
+
+  <nav class="flex justify-between items-center px-8 py-6 glass-nav sticky top-0 z-50">
+    <h1 class="text-2xl font-black tracking-tighter uppercase italic">The 1975</h1>
+    <a href="index.html" class="text-[10px] font-bold uppercase tracking-[0.3em] border border-white/20 px-6 py-2 hover:bg-white hover:text-black transition italic">
+      ← Back to Members
+    </a>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-12 gap-12 items-center">
+      
+      <div class="md:col-span-6 lg:col-span-5">
+        <div class="member-frame shadow-2xl">
+          <div class="carousel-container bg-zinc-900">
+            <div id="carousel" class="flex h-full transition-transform duration-700 ease-in-out"></div>
+            <div id="dots" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10"></div>
+            <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-black/50 hover:bg-white hover:text-black transition rounded-full text-xs"><</button>
+            <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-black/50 hover:bg-white hover:text-black transition rounded-full text-xs">></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:col-span-6 lg:col-span-7 space-y-8">
+        <div class="border-l-4 border-white pl-6">
+          <p id="member-id" class="text-[10px] uppercase tracking-[0.5em] text-zinc-500 mb-2 font-bold italic"></p>
+          <h1 id="nama" class="text-6xl lg:text-8xl font-black hero-title uppercase italic"></h1>
+          <p id="role" class="text-xl lg:text-2xl text-zinc-400 mt-4 italic font-light tracking-tight"></p>
+        </div>
+
+        <div class="space-y-6 text-zinc-400 leading-relaxed text-lg border-t border-zinc-900 pt-8 italic">
+          <p id="bio" class="first-letter:text-5xl first-letter:font-black first-letter:mr-3 first-letter:float-left first-letter:text-white"></p>
+        </div>
+
+        <div class="pt-8 flex flex-wrap gap-4">
+          <span class="px-4 py-1 border border-zinc-800 text-[9px] uppercase tracking-widest text-zinc-500 italic">Origin: Wilmslow, UK</span>
+          <span class="px-4 py-1 border border-zinc-800 text-[9px] uppercase tracking-widest text-zinc-500 italic">Era: BFIAFL</span>
+          <span class="px-4 py-1 border border-zinc-800 text-[9px] uppercase tracking-widest text-zinc-500 italic">Status: Active</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const member = params.get("member") || "matty";
+
+    const data = {
+      matty: {
+        name: "Matty Healy",
+        role: "Vocalist & Rhythm Guitar",
+        bio: "Matthew Timothy Healy (lahir 8 April 1989) adalah penyanyi-penulis lagu dan produser rekaman asal Inggris yang menjadi vokalis utama dan penulis lagu utama dari band art pop indie the 1975. Dikenal dengan liriknya yang jujur, sinis, sekaligus puitis, ia berhasil mendefinisikan estetika band sebagai ikon pop budaya modern yang tak takut bereksperimen dengan berbagai genre musik.",
+        gallery: [
+          { src: "assets/img/matt/1.jpg", position: "50% 50%" }, 
+          { src: "assets/img/matt/2.jpg", position: "50% 10%" },
+          { src: "assets/img/matt/3.jpg", position: "50% 50%" },
+          { src: "assets/img/matt/4.jpg", position: "35% 21%" } 
+        ]
+      },
+      adam: {
+        name: "Adam Hann",
+        role: "Lead Guitarist",
+        bio: "Adam Brian Thomas Hann (lahir 20 Juni 1988) adalah gitaris utama band indie rock Inggris, The 1975. Ia dikenal dengan gaya permainan gitar sonik yang teknis dan telah bersama band ini sejak awal terbentuk di awal 2000-an. Lahir di Manchester, Inggris, ia merupakan personel penting dalam menciptakan suara khas band yang memadukan riff pop rock dengan tekstur atmosferik.",
+        gallery: [
+          { src: "assets/img/adam/1.jpg", position: "7% 50%" },
+          { src: "assets/img/adam/2.jpg", position: "15% 50%" },
+          { src: "assets/img/adam/3.jpg", position: "50% 50%" },
+          { src: "assets/img/adam/4.jpg", position: "50% 50%" }
+        ]
+      },
+      ross: {
+        name: "Ross MacDonald",
+        role: "Bassist",
+        bio: "Ross MacDonald (lahir 6 Juni 1989) adalah pemain bass dan salah satu anggota pendiri band pop-rock Inggris The 1975. Lahir di Cheshire, Inggris, ia telah bermain musik bersama rekan bandnya sejak masa sekolah menengah mereka di awal tahun 2000-an. Kontribusi bassline-nya memberikan fondasi groove yang kuat dan penuh perasaan bagi setiap diskografi band ini.",
+        gallery: [
+          { src: "assets/img/ross/1.jpg", position: "50% 50%" },
+          { src: "assets/img/ross/2.jpg", position: "7% 50%" },
+          { src: "assets/img/ross/3.jpg", position: "70% 50%" },
+          { src: "assets/img/ross/4.jpg", position: "50% 50%" }
+        ]
+      },
+      george: {
+        name: "George Daniel",
+        role: "Drummer & Producer",
+        bio: "George Daniel (lahir 23 Maret 1990) adalah drummer, produser musik, dan penulis lagu asal Inggris yang paling dikenal sebagai otak di balik produksi musik The 1975. Lahir di Brussels, ia memainkan peran kunci dalam memproduseri suara khas band tersebut yang melintasi genre ambient, elektronik, dan pop. Ia juga sering berkolaborasi dengan berbagai artis indie ternama lainnya.",
+        gallery: [
+          { src: "assets/img/george/1.jpg", position: "30% 50%" },
+          { src: "assets/img/george/2.jpg", position: "60% 50%" },
+          { src: "assets/img/george/3.jpg", position: "60% 50%" },
+          { src: "assets/img/george/4.jpg", position: "0% 50%" }
+        ]
+      }
+    };
+
+    const m = data[member];
+
+    // Render Text Content
+    document.getElementById("nama").innerText = m.name;
+    document.getElementById("role").innerText = m.role;
+    document.getElementById("bio").innerText = m.bio;
+    document.getElementById("member-id").innerText = `Personnel // ${member.toUpperCase()}`;
+
+    // Carousel Rendering Logic
+    const carousel = document.getElementById("carousel");
+    const dotsContainer = document.getElementById("dots");
+    let index = 0;
+
+    m.gallery.forEach((imgObj, i) => {
+      // Create and Configure Image
+      const el = document.createElement("img");
+      el.src = imgObj.src;
+      el.className = "w-full h-full object-cover flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-700";
+      // Apply the custom position from the object
+      el.style.objectPosition = imgObj.position;
+      carousel.appendChild(el);
+
+      // Create Dot
+      const dot = document.createElement("div");
+      dot.className = `w-2 h-2 rounded-full border border-white transition-all duration-300 ${i === 0 ? 'bg-white w-6' : 'bg-transparent'}`;
+      dotsContainer.appendChild(dot);
+    });
+
+    function updateSlide() {
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+      Array.from(dotsContainer.children).forEach((dot, i) => {
+        dot.className = `w-2 h-2 rounded-full border border-white transition-all duration-300 ${i === index ? 'bg-white w-6' : 'bg-transparent'}`;
+      });
+    }
+
+    function nextSlide() {
+      index = (index + 1) % m.gallery.length;
+      updateSlide();
+    }
+
+    function prevSlide() {
+      index = (index - 1 + m.gallery.length) % m.gallery.length;
+      updateSlide();
+    }
+
+    setInterval(nextSlide, 5000);
+  </script>
+</body>
+</html>
