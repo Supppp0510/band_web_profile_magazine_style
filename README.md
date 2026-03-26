@@ -74,5 +74,3 @@ Struktur direktori berdasarkan file proyek terbaru:
 *Produced for Educational Purposes // SYNK 4.0.0*
 
 ---
-
-Sudah lengkap semua, Suf. README ini sudah sangat "menjual" konsep majalah digital kamu ke dosen. Apakah ada detail lain yang perlu saya tambahkan sebelum kamu bungkus proyeknya?
